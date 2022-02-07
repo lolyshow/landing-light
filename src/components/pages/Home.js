@@ -197,7 +197,7 @@ class Home extends React.Component{
                                 <div className = "col-md-12">   
                                     <div className = "summary-Card">     
                                         <div className = "">
-                                            <p>Promotional Code</p>
+                                            <p>Promotional Code:<span class = "promoCode">Z4KXLM9A</span></p>
                                         </div>
                                         
                                         <div className ="" style = {{float:'right'}}>

@@ -1,9 +1,26 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import img from "../images/admin.png";
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) {
+          document.getElementById('navbar_top').classList.add('fixed-top');
+          // add padding top to show content behind navbar
+          let navbar_height = document.querySelector('.navbar').offsetHeight;
+          document.body.style.paddingTop = navbar_height + 'px';
+        } else {
+          document.getElementById('navbar_top').classList.remove('fixed-top');
+           // remove padding top from body
+          document.body.style.paddingTop = '0';
+        } 
+    });
+  }); 
+
 function Navbar(){
     return(
-        <nav className="navbar navbar-expand-lg navbar-white bg-white">
+        <nav id="navbar_top" className="navbar navbar-expand-lg navbar-white bg-white tableFixHead">
             <div className="container-fluid">
                 
                 {/* <Link to = "/" class = "navbar-brand"> PhilsvibeTheMusician </Link> */}
@@ -37,6 +54,7 @@ function Navbar(){
       </nav>
     );
 }   
+
 
 export default Navbar;
 
