@@ -215,7 +215,7 @@ class Home extends React.Component{
                         <div className = "col-md-12">   
                             <div className = "summary-Card">     
                                 <div className = "">
-                                <button type="button" style = {{ marginBottom:100,backgroundColor:'#3f67e9'}} className="btn btn-primary btn-lg btn-block">Complete Payment</button>
+                                <button type="button" style = {{ marginBottom:100,backgroundColor:'#3f67e9'}} className="btn btn-primary btn-md btn-block">Complete Payment</button>
 
                                 </div>
                                 
