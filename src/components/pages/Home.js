@@ -10,7 +10,10 @@ class Home extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-          value: 'XXXX XXXX XXXX XXXX'
+          cardNumber: '4324 5433 9382 1030',
+          expDate:"03/24",
+          securityCode:"420",
+          postalCode:10119,
         };
     
         this.handleChange = this.handleChange.bind(this);
@@ -47,12 +50,12 @@ class Home extends React.Component{
                             <div className = "main-card">
                                 <div className = "card-body">
                                     <p>CARD NUMBER</p>
-                                    <p>{this.state.value}</p>
+                                    <p>{this.state.cardNumber}</p>
 
                                     <img src ={CardCard} height="50" alt=""/>
 
                                     <p>EXPIRATION DATE</p>
-                                    <p>03/24</p>
+                                    <p>{this.state.expDate}</p>
                                     <p>John Doe</p>
                                 </div>
                             </div>
@@ -93,11 +96,11 @@ class Home extends React.Component{
                                             <div className="row">
                                                 <div className="col-md-6">
                                                 <label>Credit card number</label>
-                                                <input type="text" className="form-control" value={this.state.value} style = {{backgroundColor:"#ebecee"}} onChange={this.handleChange} placeholder="Card No"/>
+                                                <input type="text" className="form-control" value={this.state.cardNumber} style = {{backgroundColor:"#ebecee"}} onChange={this.handleChange} placeholder="Card No"/>
                                                 </div>
                                                 <div className="col-md-6">
                                                 <label>Expiration date</label>
-                                                <input type="text" class="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Exp Date"/>
+                                                <input type="text"  class="form-control" value={this.state.expDate} style = {{backgroundColor:"#ebecee"}} placeholder=""/>
                                                 </div>
                                             </div>
                                         </form>
@@ -112,14 +115,14 @@ class Home extends React.Component{
                                             <div className="row">
                                                 <div className="col-md-6">
                                                     <label>Security code</label>
-                                                    <input type="text" className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Security Code"/>
+                                                    <input type="text" value = {this.state.securityCode} className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Security Code"/>
                                                 </div>
                                                 
                                             
 
                                                 <div className="col-md-6">
                                                     <label>Postal Code</label>
-                                                    <input type="text" className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Code"/>
+                                                    <input type="text"value = {this.state.postalCode} className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Code"/>
                                                 </div>
 
 
