@@ -18,10 +18,25 @@ class Home extends React.Component{
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleChangeExpDate = this.handleChangeExpDate(this);
+        // this.handleChangePostalCode = this.handleChangePostalCode(this);
+        // this.hanl
       }
     
       handleChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({cardNumber: event.target.value});
+      }
+
+      handleChangeExpDate(event) {
+        this.setState({expDate: event.target.value});
+      }
+
+      handleChangePostalCode(event) {
+        this.setState({postalCode: event.target.value});
+      }
+
+      handleChangeSecurityCode(event) {
+        this.setState({securityCode: event.target.value});
       }
     
       handleSubmit(event) {
@@ -100,7 +115,7 @@ class Home extends React.Component{
                                                 </div>
                                                 <div className="col-md-6">
                                                 <label>Expiration date</label>
-                                                <input type="text"  class="form-control" value={this.state.expDate} style = {{backgroundColor:"#ebecee"}} placeholder=""/>
+                                                <input type="text"  class="form-control" value={this.state.expDate} onChange={this.handleChangeExpDate} style = {{backgroundColor:"#ebecee"}} placeholder=""/>
                                                 </div>
                                             </div>
                                         </form>
@@ -115,14 +130,14 @@ class Home extends React.Component{
                                             <div className="row">
                                                 <div className="col-md-6">
                                                     <label>Security code</label>
-                                                    <input type="text" value = {this.state.securityCode} className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Security Code"/>
+                                                    <input type="text" value = {this.state.securityCode} onChange={this.handleChangeSecurityCode} className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Security Code"/>
                                                 </div>
                                                 
                                             
 
                                                 <div className="col-md-6">
                                                     <label>Postal Code</label>
-                                                    <input type="text"value = {this.state.postalCode} className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Code"/>
+                                                    <input type="text"value = {this.state.postalCode} onChange={this.handleChangePostalCode} className="form-control" style = {{backgroundColor:"#ebecee"}} placeholder="Code"/>
                                                 </div>
 
 
